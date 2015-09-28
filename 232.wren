@@ -24,5 +24,15 @@ while (iterA = coordinates.iterate(iterA)) {
   }
 }
 
-System.print(bestA)
-System.print(bestB)
+var print = Fn.new {|coordinate|
+  System.write("(")
+  System.write(coordinate[0])
+  System.write(",")
+  System.write(coordinate[1])
+  System.write(")")
+}
+
+print.call(bestA)
+System.write(" ")
+print.call(bestB)
+System.print()
